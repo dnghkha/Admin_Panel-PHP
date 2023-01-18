@@ -51,11 +51,11 @@
                         <div class="col-md-9 col-sm-9 ">
                             <div class="form-check">
                                 <label class="form-check-label mr-5">
-                                    <input type="radio" class="form-check-input" name="gender" id="<?= isset($user) ? (($user->Gender == 1) ? 'gender1' : '') : '' ?>" value="1">
+                                    <input type="radio" class="form-check-input" name="gender" <?= (isset($user))?(($user->Gender == 1)?'checked':''):'' ?> value="1">
                                     Nam
                                 </label>
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="gender" id="<?= isset($user) ? (($user->Gender == 0) ? 'gender0' : '') : '' ?>" value="0">
+                                    <input type="radio" class="form-check-input" name="gender" <?= (isset($user))?(($user->Gender == 0)?'checked':''):'' ?> value="0">
                                     Nữ
                                 </label>
                             </div>
@@ -101,9 +101,3 @@
         </div>
     </div>
 </div>
-
-<!-- 123 -->
-<script>
-    function myFunction() {}
-    document.getElementById("gender<?= $user->Gender ?>").checked = true;
-</script>
